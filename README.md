@@ -3,7 +3,7 @@ This repository contains all the components of the final project for the Robotic
 
 # 6-DoF Robotic Arm with Gripper
 
-![urdf](https://github.com/FryFr/JavaPOOExercise/assets/79547422/4be8ba65-809e-4ff0-ac63-4192f2127995)
+![urdf](https://github.com/FryFr/Industria_Robotics_Arm_Project/assets/79547422/183a9d15-5690-4e02-acbe-10d2588c1b59)
 
 ## Final Project for Robotics Course
 
@@ -19,7 +19,7 @@ This initial stage was vital as it laid the foundation for the subsequent physic
 
 The precision and detail of the 3D models generated in Solidworks were not only useful for design conceptualization but also served as a fundamental input for the manufacturing stage. The digital models could be exported in formats compatible with 3D printers, allowing for the precise and efficient fabrication of each component of the robotic arm. Thus, the students' ideas were materialized into tangible physical pieces.
 
-![WhatsApp Image 2024-06-12 at 8 35 18 AM](https://github.com/FryFr/JavaPOOExercise/assets/79547422/39657554-21d6-486e-97b8-94641b8c337a)
+![WhatsApp Image 2024-06-12 at 8 35 18 AM](https://github.com/FryFr/Industria_Robotics_Arm_Project/assets/79547422/d15d2743-2af6-4c10-8b84-d61453d19474)
 
 ## Component Acquisition
 
@@ -43,7 +43,7 @@ It is true that there are other methodologies for finding forward kinematics, su
 
 Once all the reference systems of the 6-degree-of-freedom robot were obtained and the dimensions defined in terms of variables, it was time to proceed with the DH table. To complete this table, it is necessary to identify: the pure rotation in z, pure translation in z, pure translation in x, and pure rotation in x (in that order) of each reference system established in relation to the next system. 
 
-![WhatsApp Image 2024-06-11 at 7 05 25 PM](https://github.com/FryFr/JavaPOOExercise/assets/79547422/60f90e4a-f01a-4976-9a9b-4cf5eb635b6d)
+![WhatsApp Image 2024-06-11 at 7 05 25 PM](https://github.com/FryFr/Industria_Robotics_Arm_Project/assets/79547422/5c642a34-261c-49b6-b497-d15a4341e0b9)
 
 After developing the physical robotic arm and its control system through automatic programming, the next crucial step in the project is creating a virtual simulation environment. This environment will allow testing, validating, and optimizing the robotic arm's performance in a controlled setting before its real-world implementation.
 
@@ -68,7 +68,7 @@ For creating the simulation environment, the following powerful tools will be us
 - **Algorithm Training**: The simulation environment can be used to train and optimize control or motion planning algorithms for the robotic arm.
 - **Testing in Different Environments**: Tests can be conducted in various virtual environments to evaluate the robotic arm's behavior in different situations and conditions.
 
-![Simulation](images/simulation.png)
+
 
 ---
 
