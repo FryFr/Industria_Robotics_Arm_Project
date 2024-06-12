@@ -9,54 +9,57 @@ This repository contains all the components of the final project for the Robotic
 **Professor**: Nikolay Prieto, Ph.D.  
 **Due Date**: June 10th, 2024  
 
-### Project Overview
-This repository contains all the components of the final project for the Robotics course, which involves the design, simulation, and construction of a 4-DoF (Degrees-of-Freedom) robotic arm equipped with a gripper. The goal is to develop a robotic arm capable of catching an object at a known location using the Robot Operating System 2 (ROS2). The project culminates in the 3D printing and real-world demonstration of the robot.
+## 3D Design
 
-### Project Objectives
-- Acquire hands-on experience with robotic arm kinematics and inverse kinematics.
-- Utilize ROS2 for the simulation and control of the robotic arm.
-- Design and simulate a grasping task within a virtual environment.
-- Translate the virtual design into a 3D printable model.
-- Construct and demonstrate a functioning robotic arm.
-- Document the entire project through a comprehensive report.
+The project began with a crucial phase of 3D design, using Solidworks as the cornerstone for success. Solidworks, a powerful and versatile CAD (Computer-Aided Design) software, allowed the students to translate their ideas into precise and detailed digital models.
 
-### Repository Contents
-- **ROS2 Simulation Code**: Source code for simulating the robotic arm and gripper in ROS2.
-- **Inverse Kinematics Calculations**: Implementations using the robotics-toolbox library.
-- **CAD Design Files**: STL and CAD files for 3D printing the robotic arm components.
-- **Additional Resources**: Configuration files, scripts, and other materials used during the project.
+This initial stage was vital as it laid the foundation for the subsequent physical development of the robotic arm. Through Solidworks, the students were able to create virtual representations of each component of the arm, from joints and links to fastening and control elements. This allowed project participants to clearly visualize the shape, dimensions, and relationships between the various parts of the robot, facilitating sound technical decision-making.
 
-### Project Report
-The project report, preferably written in LaTeX, includes the following sections:
-1. **Introduction**: Overview of the project and its objectives.
-2. **Literature Review**: Background information on 4-DoF robotic arms, inverse kinematics, and ROS2.
-3. **System Design**: Detailed description of the robotic arm design, including link lengths, joint types, and the gripper mechanism.
-4. **Kinematic Analysis**: Mathematical derivation of the forward and inverse kinematics for the specific robotic arm design.
-5. **Simulation Environment**: Setup details of the ROS2 simulation, including the initial coordinates of the object to be grasped.
-6. **Control Strategy**: Explanation of the control methods used to achieve the grasping task in the simulation.
-7. **3D Printing and Construction**: Process of 3D printing, assembly instructions, and materials used.
-8. **Results and Discussion**: Analysis of the simulation results and the functionality of the 3D printed robot.
-9. **Conclusion**: Summary of the project achievements and key learnings.
-10. **References**: List of all resources cited in the report.
+The precision and detail of the 3D models generated in Solidworks were not only useful for design conceptualization but also served as a fundamental input for the manufacturing stage. The digital models could be exported in formats compatible with 3D printers, allowing for the precise and efficient fabrication of each component of the robotic arm. Thus, the students' ideas were materialized into tangible physical pieces.
 
-### Grading Rubric
-- **ROS2 Simulation (40%)**: Completeness, functionality, and accuracy of the simulation environment.
-- **Inverse Kinematics (20%)**: Correctness of the mathematical derivation and implementation.
-- **3D Printing and Construction (20%)**: Clarity of design, printability, and successful demonstration of the robot's capabilities.
-- **Project Report (20%)**: Organization, clarity, technical depth, and comprehensiveness.
+![3D Design](images/design_3d.png)
 
-### Resources
-- [ROS2 Documentation](https://docs.ros.org/)
-- [MoveIt!2 Documentation](https://docs.progress.com/category/moveit-documentation)
-- Online resources for 4-DoF robotic arm kinematics.
+## Component Acquisition
 
-### Additional Notes
-- Exploration of different design options for the robotic arm and gripper mechanism is encouraged.
-- Collaboration is allowed, but each student must submit an individual report and repository.
-- Document progress regularly and test the simulation often.
-- Ensure safety precautions during 3D printing and assembly.
-- The robot's base must be securely fixed to the ground.
+After the meticulous 3D design phase, it was time to materialize the robotic arm by acquiring the necessary components for its construction. Based on the technical specifications defined during the design phase, the following elements were purchased:
+
+- **Servomotors**: Two types of servomotors were selected for the project: MG996R and SG90. The MG996R, with higher torque and precision, were used for the main joints of the arm, while the more economical and lighter SG90 were used for the secondary joints.
+- **Arduino Uno Board**: This microcontroller board, known for its ease of use and versatility, became the brain of the robotic arm. Its processing and communication capabilities made it the ideal choice for controlling the arm's movements and sensor interactions.
+- **PCA9685 Board**: To extend the servo control capacity of the Arduino Uno, the PCA9685 board was incorporated. This expansion board allowed connecting and controlling up to 16 additional servomotors, which was essential for the complex articulated structure of the robotic arm.
+- **Jumpers**: These flexible connection cables were used to establish electrical connections between the Arduino Uno board, the PCA9685 board, the servomotors, and the sensors. Their practicality and ease of use sped up the assembly and configuration process of the system.
+- **Power Supply**: To provide stable power to all the electronic components of the robotic arm, a DC power supply with adequate capacity and voltage was acquired. This ensured the proper functioning of the servomotors, the Arduino Uno board, and the PCA9685 board.
+- **PLA Filament**: For the 3D printing of the parts designed in Solidworks, PLA (polylactic acid) filament was used. This high-quality, biodegradable material was the ideal choice for manufacturing the lightweight and durable structures of the robotic arm.
+- **Fasteners**: To ensure precise and robust fastening of the 3D printed parts and electronic components, a selection of screws, nuts, and washers of different sizes and materials was acquired. The careful selection of fasteners ensured the stability and durability of the robotic arm.
+
+![Components](images/components.png)
+
+## Simulation Environment
+
+After developing the physical robotic arm and its control system through automatic programming, the next crucial step in the project is creating a virtual simulation environment. This environment will allow testing, validating, and optimizing the robotic arm's performance in a controlled setting before its real-world implementation.
+
+For creating the simulation environment, the following powerful tools will be used:
+
+- **ROS2 (Robot Operating System 2)**: An open-source software framework widely used in robotics for communication between different nodes and distributed task execution.
+- **MoveIt**: A set of software tools for motion planning and robotic manipulation, integrated into the ROS2 ecosystem. MoveIt provides advanced algorithms to generate safe and efficient trajectories for the robotic arm, considering physical constraints and environmental restrictions.
+
+### Steps to Create the Simulation Environment:
+
+1. **Installation of ROS2 and MoveIt**: ROS2 and MoveIt will be installed on the Ubuntu system following the official installation instructions.
+2. **Modeling the Robotic Arm**: A precise 3D model of the robotic arm will be created using 3D modeling tools like Solidworks. The model should include all joints, dimensions, and physical properties of the real arm.
+3. **Integration of the Model into ROS2**: The 3D model of the robotic arm will be integrated into the ROS2 simulation environment using tools like RViz. This will allow visualizing the robotic arm in the virtual environment and controlling its movements through ROS2 commands.
+4. **MoveIt Configuration**: MoveIt will be configured to work with the robotic arm model and the simulation environment. This involves defining the joints, physical properties, and movement limits of the arm, as well as the motion planning parameters.
+5. **Testing and Validation**: Extensive testing will be conducted to verify the proper functioning of the simulation environment, the accuracy of the robotic arm model, and the effectiveness of MoveIt's motion planning algorithms.
+
+### Benefits of the Simulation Environment:
+
+- **Movement Validation**: The simulation environment allows testing and validating different movements of the robotic arm without risking the actual hardware.
+- **Programming Optimization**: The robotic arm's programming can be optimized in the simulation environment before implementing it in the physical system.
+- **Error Detection**: The simulation environment facilitates error detection in the programming or the robotic arm model before they cause issues in the real system.
+- **Algorithm Training**: The simulation environment can be used to train and optimize control or motion planning algorithms for the robotic arm.
+- **Testing in Different Environments**: Tests can be conducted in various virtual environments to evaluate the robotic arm's behavior in different situations and conditions.
+
+![Simulation](images/simulation.png)
 
 ---
 
-Feel free to contribute to the project by forking the repository and submitting pull requests. Document all changes and ensure code quality and clarity in all submissions.
+For more details on each stage of the project and to access the necessary files, please review the following sections of the repository.
