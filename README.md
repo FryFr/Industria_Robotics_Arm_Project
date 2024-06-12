@@ -3,6 +3,8 @@ This repository contains all the components of the final project for the Robotic
 
 # 6-DoF Robotic Arm with Gripper
 
+![urdf](https://github.com/FryFr/JavaPOOExercise/assets/79547422/4be8ba65-809e-4ff0-ac63-4192f2127995)
+
 ## Final Project for Robotics Course
 
 **Institution**: Universidad EAN  
@@ -17,7 +19,7 @@ This initial stage was vital as it laid the foundation for the subsequent physic
 
 The precision and detail of the 3D models generated in Solidworks were not only useful for design conceptualization but also served as a fundamental input for the manufacturing stage. The digital models could be exported in formats compatible with 3D printers, allowing for the precise and efficient fabrication of each component of the robotic arm. Thus, the students' ideas were materialized into tangible physical pieces.
 
-![3D Design](images/design_3d.png)
+![WhatsApp Image 2024-06-12 at 8 35 18 AM](https://github.com/FryFr/JavaPOOExercise/assets/79547422/39657554-21d6-486e-97b8-94641b8c337a)
 
 ## Component Acquisition
 
@@ -31,9 +33,17 @@ After the meticulous 3D design phase, it was time to materialize the robotic arm
 - **PLA Filament**: For the 3D printing of the parts designed in Solidworks, PLA (polylactic acid) filament was used. This high-quality, biodegradable material was the ideal choice for manufacturing the lightweight and durable structures of the robotic arm.
 - **Fasteners**: To ensure precise and robust fastening of the 3D printed parts and electronic components, a selection of screws, nuts, and washers of different sizes and materials was acquired. The careful selection of fasteners ensured the stability and durability of the robotic arm.
 
-![Components](images/components.png)
+
 
 ## Simulation Environment
+
+The Denavit-Hartenberg (DH) algorithm was applied. This algorithm was chosen because it is one of the most efficient for finding the forward kinematics in robotic manipulators. A reference system 0 was established and assigned to axis 1. Following the algorithm, the other reference systems from 1 to 6 were positioned until reaching the end-effector, always avoiding pure rotations and translations around the y-axis.
+
+It is true that there are other methodologies for finding forward kinematics, such as trigonometric analysis and the formulation of position equations in x, y, z coordinates. These methodologies are suitable for representing robots with two or three degrees of freedom but present difficulties when analyzing a higher number of degrees of freedom, as in the case of the present robot.
+
+Once all the reference systems of the 6-degree-of-freedom robot were obtained and the dimensions defined in terms of variables, it was time to proceed with the DH table. To complete this table, it is necessary to identify: the pure rotation in z, pure translation in z, pure translation in x, and pure rotation in x (in that order) of each reference system established in relation to the next system. 
+
+![WhatsApp Image 2024-06-11 at 7 05 25 PM](https://github.com/FryFr/JavaPOOExercise/assets/79547422/60f90e4a-f01a-4976-9a9b-4cf5eb635b6d)
 
 After developing the physical robotic arm and its control system through automatic programming, the next crucial step in the project is creating a virtual simulation environment. This environment will allow testing, validating, and optimizing the robotic arm's performance in a controlled setting before its real-world implementation.
 
